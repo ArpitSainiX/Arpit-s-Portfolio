@@ -30,7 +30,7 @@ export default function ImageCursorTrail({
   let last = { x: 0, y: 0 }
 
   const activate = (image: HTMLImageElement, x: number, y: number) => {
-    const containerRect = containerRef.current?.getBoundingClientRect()
+    const containerRect = (containerRef.current as unknown as HTMLElement)?.getBoundingClientRect()
     if (!containerRect) return
     const relativeX = x - containerRect.left
     const relativeY = y - containerRect.top
@@ -74,8 +74,8 @@ export default function ImageCursorTrail({
 
   return (
     <section
-      onMouseMove={handleOnMove}
-      onTouchMove={(e) => handleOnMove(e.touches[0])}
+      onMouseMove={(e: React.MouseEvent) => handleOnMove(e as unknown as MouseEvent)}
+      onTouchMove={(e: React.TouchEvent) => handleOnMove(e.touches[0] as Touch)}
       ref={containerRef}
       className={cn(
         "relative grid h-[600px] w-full place-content-center overflow-hidden rounded-lg ",
