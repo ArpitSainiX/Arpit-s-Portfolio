@@ -31,6 +31,7 @@ export default function ImageCursorTrail({
 
   const activate = (image: HTMLImageElement, x: number, y: number) => {
     const containerRect = containerRef.current?.getBoundingClientRect()
+    if (!containerRect) return
     const relativeX = x - containerRect.left
     const relativeY = y - containerRect.top
     image.style.left = `${relativeX}px`
