@@ -16,7 +16,6 @@ const Page = () => {
   return (
         <div className="pt-14 sm:pt-16 md:pt-18 lg:pt-20 xl:pt-24">
           <Navbar/>
-          <Images/>
           <div className='text-center mt-16 md:mt-25 p-4 md:p-8'>
                 <h4 className='text-2xl md:text-4xl font-[cursive] tracking-tight'>Heyy Welcome to my portfolio!</h4>
                 <h1 className="text-4xl md:text-6xl lg:text-8xl mt-3 md:mt-5 tracking-light font-bold font-[skip]">I am Arpit</h1>
