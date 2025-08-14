@@ -15,7 +15,7 @@ const FlipLink: React.FC<FlipLinkProps> = ({ children, href }) => {
       whileHover="hovered"
       target="_blank"
       href={href}
-      className="relative block overflow-hidden whitespace-nowrap text-4xl font-semibold uppercase dark:text-white/90 sm:text-7xl md:text-8xl "
+      className="relative block overflow-hidden text-4xl font-semibold uppercase dark:text-white/90 sm:text-7xl md:text-8xl truncate max-w-full"
       style={{
         lineHeight: 0.75,
       }}

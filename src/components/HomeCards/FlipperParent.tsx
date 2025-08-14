@@ -11,7 +11,7 @@ const  FlipperParent = () => {
                 Connect with me.
             </div>
             
-            <div className='flex flex-col sm:flex-row items-center justify-center bg-gray-500/50 px-4 md:px-8 lg:px-16 py-4 md:py-6 font-[skip] font-bold tracking-light gap-4 md:gap-6 lg:gap-10'>
+            <div className='flex flex-col sm:flex-row items-center justify-center bg-gray-500/50 px-4 md:px-8 lg:px-16 py-4 md:py-6 font-[skip] font-bold tracking-light gap-4 md:gap-6 lg:gap-10 overflow-hidden'>
             <div>
                 <FlipLink href="https://www.instagram.com/arpitsainix/">Instagram</FlipLink>
             </div>

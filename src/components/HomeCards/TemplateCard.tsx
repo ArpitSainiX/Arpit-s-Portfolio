@@ -17,20 +17,23 @@ const TemplateCard = () => {
         description:
         "This is the webpage where you can learn photoshop, video editing, and more in free of cost.",
         src: "https://i.pinimg.com/736x/1d/9a/47/1d9a47d36c2c65765e04de27babfe353.jpg",
+        link: "https://arpitsainix.github.io/Personalwebsite/"
     },
 
     {
         title: "Video editing portfolio",
         description:
-        "It is the video editing portfolio where you can see my video editing work.",
+        "It is the video editing portfolio where you can see my video editing work including youtube videos.",
         src: "https://i.pinimg.com/736x/54/68/a3/5468a33bc43e258995f15ad01e5ad7cc.jpg",
+        link: "https://arpitsainix.github.io/Portfolio/", 
     },
     
     {
         title: "CSS-ONLY",
         description:
-        "This is the css-only project where you can see the only css, It was made with the help of YouTube.",
+        "This is the css-only project where you can see the only css, It had made with the help of YouTube.",
         src: "https://i.pinimg.com/736x/f1/7d/db/f17ddb244e3f2f6a720e61cd3f8161fb.jpg",
+        link: "https://arpitsainix.github.io/CSS-only/"
     },
     ]
 
@@ -44,18 +47,25 @@ const TemplateCard = () => {
                     
                         
                     {cards.map((card, index) => (
-                    <MinimalCard className="m-2 w-full lg:w-[460px]" key={index}>
-                        <img
-                            className="w-full h-auto rounded-3xl"
-
-                            src={card.src}
-                            alt={card.title}
-                        />
-                        <MinimalCardTitle>{card.title}</MinimalCardTitle>
-                        <MinimalCardDescription>
-                        {card.description}
-                        </MinimalCardDescription>
-                    </MinimalCard>
+                    <a 
+                        href={card.link} 
+                        target="_blank" 
+                        rel="noopener noreferrer" 
+                        key={index}
+                        className="block m-2 w-full lg:w-[460px] transition-transform hover:scale-105"
+                    >
+                        <MinimalCard className="w-full">
+                            <img
+                                className="w-full h-auto rounded-3xl"
+                                src={card.src}
+                                alt={card.title}
+                            />
+                            <MinimalCardTitle>{card.title}</MinimalCardTitle>
+                            <MinimalCardDescription>
+                            {card.description}
+                            </MinimalCardDescription>
+                        </MinimalCard>
+                    </a>
                     ))}
                 </div>
             </div>
